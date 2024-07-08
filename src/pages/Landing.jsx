@@ -187,7 +187,7 @@ const Landing = function () {
     }
 
     return (
-        <Container maxWidth={'lg'}>
+        <Container maxWidth={"xl"}>
             {Header()}
             <div style={{height: "80vh"}}>
                 <Routes>
