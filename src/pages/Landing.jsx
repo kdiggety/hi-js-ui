@@ -99,7 +99,7 @@ const Landing = function () {
                                 {pages.map((page) => (
                                     <MenuItem key={page} onClick={handleCloseNavMenu}>
                                         <Typography textAlign="center">
-                                            <Link style={{textDecoration: "none", color: "white"}} to={`/${page.replace(/\s+/g, '-').toLowerCase()}`}>
+                                            <Link style={{textDecoration: "none", color: "black"}} to={`/${page.replace(/\s+/g, '-').toLowerCase()}`}>
                                                 {page}
                                             </Link>
                                         </Typography>
