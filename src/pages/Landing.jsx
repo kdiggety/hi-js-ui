@@ -14,7 +14,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import {Link, Route, Routes} from 'react-router-dom';
+import {Link, Outlet, Route, Routes} from 'react-router-dom';
 import Dashboard from "./Dashboard.jsx";
 import ClientProfile from "./clients/ClientProfile.jsx";
 import AccountList from "./accounts/AccountList.jsx";
@@ -199,6 +199,7 @@ const Landing = function () {
                     <Route path='/stocks' element={<StockList/>}/>
                     <Route path='/about-us' element={<AboutUs/>}/>
                 </Routes>
+                <Outlet/>
             </div>
             {Footer()}
         </Container>
