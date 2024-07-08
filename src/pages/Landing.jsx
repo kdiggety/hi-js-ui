@@ -20,6 +20,7 @@ import ClientProfile from "./clients/ClientProfile.jsx";
 import AccountList from "./accounts/AccountList.jsx";
 import StockList from "./stocks/StockList.jsx";
 import AboutUs from "./AboutUs.jsx";
+import AccountHoldings from "./accounts/AccountHoldings.jsx";
 
 const Landing = function () {
     const pages = ['Accounts', 'Stocks', 'About Us'];
@@ -192,7 +193,9 @@ const Landing = function () {
                 <Routes>
                     <Route path='/' element={<Dashboard/>}/>
                     <Route path='/profile' element={<ClientProfile/>}/>
-                    <Route path='/accounts' element={<AccountList/>}/>
+                    <Route path='/accounts' element={<AccountList/>}>
+                        <Route path='account/holdings' element={<AccountHoldings/>}/>
+                    </Route>
                     <Route path='/stocks' element={<StockList/>}/>
                     <Route path='/about-us' element={<AboutUs/>}/>
                 </Routes>
