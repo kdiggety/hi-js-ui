@@ -193,13 +193,11 @@ const Landing = function () {
                 <Routes>
                     <Route path='/' element={<Dashboard/>}/>
                     <Route path='/profile' element={<ClientProfile/>}/>
-                    <Route path='/accounts' element={<AccountList/>}>
-                        <Route path='account/holdings' element={<AccountHoldings/>}/>
-                    </Route>
+                    <Route path='/accounts' element={<AccountList/>}/>
+                    <Route path='/accounts/:accountNumber/holdings' element={<AccountHoldings/>}/>
                     <Route path='/stocks' element={<StockList/>}/>
                     <Route path='/about-us' element={<AboutUs/>}/>
                 </Routes>
-                <Outlet/>
             </div>
             {Footer()}
         </Container>

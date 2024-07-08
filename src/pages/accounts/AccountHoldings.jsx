@@ -1,7 +1,7 @@
 const AccountHoldings = function () {
     return (
         <>
-            <p>This is the AccountHoldings page.</p>
+            <p>This is the Account Holdings page.</p>
         </>
     )
 }
