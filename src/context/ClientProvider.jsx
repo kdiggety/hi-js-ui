@@ -5,13 +5,14 @@ export const ClientContext = createContext(null);
 
 const ClientProvider = ({children}) => {
     const [client, setClient] = useState({
+        id: crypto.randomUUID(),
         firstName: 'Ken',
         lastName: 'Lewis',
         address: {
-            street: 'Street',
-            city: 'City',
-            state: 'State',
-            zip: 'Zip'
+            street: '123 Main St.',
+            city: 'Big City',
+            state: 'CA',
+            zip: '91234'
         }
     })
 

@@ -1,7 +1,12 @@
+import AccountProvider from "../../context/AccountProvider.jsx";
+import AccountListTable from "./AccountListTable.jsx";
+
 const AccountList = function () {
-    return <>
-        <p>This is the Account List page.</p>
-    </>
+    return (
+        <AccountProvider>
+            <AccountListTable/>
+        </AccountProvider>
+    )
 }
 
 export default AccountList

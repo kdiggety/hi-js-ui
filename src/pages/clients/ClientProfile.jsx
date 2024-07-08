@@ -98,6 +98,18 @@ const Body = function () {
                 <RedditTextField id="first-name" label="First Name" variant="standard" value={client.firstName}/>
                 <RedditTextField id="last-name" label="Last Name" variant="standard" value={client.lastName}/>
             </div>
+            <div>
+                <RedditTextField id="address" label="Street Address" variant="standard" value={client.address.street}/>
+            </div>
+            <div>
+                <RedditTextField id="city" label="City" variant="standard" value={client.address.city}/>
+            </div>
+            <div>
+                <RedditTextField id="state" label="State" variant="standard" value={client.address.state}/>
+            </div>
+            <div>
+                <RedditTextField id="zip-code" label="Zip Code" variant="standard" value={client.address.zip}/>
+            </div>
         </Box>
     )
 }
