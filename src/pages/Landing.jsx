@@ -21,6 +21,7 @@ import AccountList from "./accounts/AccountList.jsx";
 import StockList from "./stocks/StockList.jsx";
 import AboutUs from "./AboutUs.jsx";
 import AccountHoldings from "./accounts/AccountHoldings.jsx";
+import StockDetails from "./stocks/StockDetails.jsx";
 
 const Landing = function () {
     const pages = ['Accounts', 'Stocks', 'About Us'];
@@ -196,6 +197,7 @@ const Landing = function () {
                     <Route path='/accounts' element={<AccountList/>}/>
                     <Route path='/accounts/:accountNumber/holdings' element={<AccountHoldings/>}/>
                     <Route path='/stocks' element={<StockList/>}/>
+                    <Route path='/stocks/:stockSymbol' element={<StockDetails/>}/>
                     <Route path='/about-us' element={<AboutUs/>}/>
                 </Routes>
             </div>

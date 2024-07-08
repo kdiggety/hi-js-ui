@@ -3,9 +3,9 @@ import {Link} from "react-router-dom";
 
 const StockList = function () {
     const [stocks, setStocks] = useState([
-        {symbol: "AAPL", descrption: "Apple Inc", pricePerShare: "$220"},
-        {symbol: "MMM", descrption: "3M Manufacturing", pricePerShare: "$92"},
-        {symbol: "BBY", descrption: "Best Buy", pricePerShare: "$90"},
+        {symbol: "AAPL", description: "Apple Inc", pricePerShare: "$220"},
+        {symbol: "MMM", description: "3M Manufacturing", pricePerShare: "$92"},
+        {symbol: "BBY", description: "Best Buy", pricePerShare: "$90"},
     ])
 
     return (
@@ -28,11 +28,11 @@ const StockList = function () {
                                     (
                                         <tr key={stock.symbol}>
                                             <td>
-                                                <Link to={`stock/${stock.symbol}`}>
+                                                <Link to={`${stock.symbol}`}>
                                                     {stock.symbol}
                                                 </Link>
                                             </td>
-                                            <td>{stock.descrption}</td>
+                                            <td>{stock.description}</td>
                                             <td>{stock.pricePerShare}</td>
                                         </tr>
                                     )
