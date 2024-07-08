@@ -11,11 +11,14 @@ const AccountListTable = function () {
                 ("No accounts"):
                 (
                     <table>
-                        <tr>
-                            <th>Account Number</th>
-                            <th>Type</th>
-                            <th>Balance</th>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>Account Number</th>
+                                <th>Type</th>
+                                <th>Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                         {
                             accounts.map(account =>
                                 (
@@ -27,6 +30,7 @@ const AccountListTable = function () {
                                 )
                             )
                         }
+                        </tbody>
                     </table>
                 )
             }
