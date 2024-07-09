@@ -1,15 +1,21 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {useLocation} from "react-router-dom";
 
 const StockDetails = function () {
-    const [stockDetails, setStockDetails] = useState([
-        {symbol: "AAPL", description: "Apple Inc", pricePerShare: "$220", details: {"fiftyTwoWeekHigh": "$225.75"}}
-    ])
+    const location = useLocation()
+    const { symbol } = location.state
+
+    const [stockDetails, setStockDetails] = useState({})
+
+    useEffect(() => {
+        setStockDetails({symbol: symbol, description: "Stock Description", pricePerShare: "$100", fiftyTwoWeekHigh: "$105"})
+    }, []);
 
     return (
         <div>
-            <h2>{stockDetails[0].description} ({stockDetails[0].symbol})</h2>
-            <p>{stockDetails[0].pricePerShare}</p>
-            <p>52 Week High: {stockDetails[0].fiftyTwoWeekHigh}</p>
+            <h2>{stockDetails.description} ({stockDetails.symbol})</h2>
+            <p>{stockDetails.pricePerShare}</p>
+            <p>52 Week High: {stockDetails.fiftyTwoWeekHigh}</p>
         </div>
     )
 }

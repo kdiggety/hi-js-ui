@@ -28,7 +28,7 @@ const StockList = function () {
                                     (
                                         <tr key={stock.symbol}>
                                             <td>
-                                                <Link to={`${stock.symbol}`}>
+                                                <Link to={`${stock.symbol}`} state={stock}>
                                                     {stock.symbol}
                                                 </Link>
                                             </td>

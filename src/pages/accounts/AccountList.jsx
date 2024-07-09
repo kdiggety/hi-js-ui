@@ -28,7 +28,7 @@ const AccountList = function () {
                                     (
                                         <tr key={account.accountNumber}>
                                             <td>
-                                                <Link to={`${account.accountNumber}/holdings`}>
+                                                <Link to={`${account.accountNumber}/holdings`} state={account}>
                                                     {account.accountNumber}
                                                 </Link>
                                             </td>
